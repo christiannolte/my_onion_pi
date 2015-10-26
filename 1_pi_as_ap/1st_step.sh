@@ -19,11 +19,13 @@ sudo iptables -S
 sudo sh -c "iptables-save > /etc/iptables.ipv4.nat"
 
 sudo wget http://adafruit-download.s3.amazonaws.com/adafruit_hostapd_14128.zip
-unzip adafruit_hostapd_14128.zip
+sudo unzip adafruit_hostapd_14128.zip
+sudo rm adafruit_hostapd_14128.zip
 sudo mv /usr/sbin/hostapd /usr/sbin/hostapd.ORIG
 sudo mv hostapd /usr/sbin
 sudo chmod 755 /usr/sbin/hostapd
-sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
+
+#sudo /usr/sbin/hostapd /etc/hostapd/hostapd.conf
 
 sudo service hostapd start 
 sudo service isc-dhcp-server start
