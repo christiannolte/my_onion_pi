@@ -5,7 +5,7 @@ echo "installing hostapd and dhcp daemon"
 sudo apt-get install hostapd isc-dhcp-server
 echo "copying configuration files"
 sudo cp configs/dhcpd.conf /etc/dhcp/dhcpd.conf
-sudo cp configs/isc-dhcp-server /etc/default/isc-shcp-server
+sudo cp configs/isc-dhcp-server /etc/default/isc-dhcp-server
 sudo ifdown wlan0
 sudo cp configs/interfaces /etc/network/interfaces
 sudo cp configs/hostapd.conf /etc/hostapd/hostapd.conf
